@@ -1,0 +1,77 @@
+<!-- Modal Crear Experiencia-->
+<form [formGroup]="crearExperiencia" (ngSubmit)="onEnviar($event)"name="experienciaForm" class="bg-white rounded p-5 seccion">
+    <div class="modal fade" id="crearExperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Experiencia</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+              
+                
+                  
+                  <form name="experienciaForm">
+                    <div class="modal-body">
+                    
+                      <!--formulario de experiencia-->
+                   
+                      <div class="mb-3">
+                      <label for="lugar"class="form-label">Crear Lugar</label>
+                      <textarea class="form-control"  formControlName="lugar"[ngModel]="experiencia.lugar" rows="3" [ngClass]="{'is-invalid': Lugar.errors && Lugar.touched, 'is-valid': !Lugar.errors && Lugar.touched}"></textarea>
+                      <div *ngIf="Lugar.errors && Lugar.touched">    
+                        <p *ngIf="Lugar.hasError('required')" class="text-danger">
+                          El lugar es requerido.
+                        </p>></textarea>
+                      
+                      </div>
+  
+                      <div class="mb-3">
+                        <label for="inicio"class="form-label">Crear Inicio</label>
+                        <textarea class="form-control"  formControlName="inicio"></textarea> 
+                        
+                        </div>
+  
+                        <div class="mb-3">
+                          <label for="fin"class="form-label">Crear Fin</label>
+                          <textarea class="form-control"  formControlName="fin"></textarea>
+                          
+                          </div>
+  
+                          <div class="mb-3">
+                            <label for="puesto"class="form-label">Crear Puesto</label>
+                            <textarea class="form-control"  formControlName="puesto" [ngModel]="experiencia.puesto" rows="3" [ngClass]="{'is-invalid': Puesto.errors && Puesto.touched, 'is-valid': !Puesto.errors && Puesto.touched}"></textarea>
+                            <div *ngIf="Puesto.errors && Puesto.touched">    
+                              <p *ngIf="Puesto.hasError('required')" class="text-danger">
+                                El puesto es requerido.
+                              </p>></textarea>>
+                      
+                            </div>
+          
+                            <div>
+                            </div> 
+  
+    <!-- Button trigger modal -->
+     <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#crearExperiencia">
+    <i class="fa fa-pen"></i>
+    </button>
+    
+     <!-- Button trigger modal cerrar-->
+     <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#experienciaModal"><i class="fa-solid 
+      fa-trash-can"></i></button>
+  
+  
+  
+                   
+                  
+                  
+    <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-Login">Guardar</button>
+              
+               </div>
+              </form>
+            </div>
+          </div>
+        </div>

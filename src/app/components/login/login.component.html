@@ -1,0 +1,61 @@
+<!-- Button trigger modal -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="loginModalLabel">Editar</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)"> 
+            <div class="modal-body"> 
+
+    <label for="mail">email</label>
+    <input type="text" formControlName="Escribe aquí tu usuario"[class.border-danger]="MailValid">
+    <div *ngIf="Mail?.errors && Mail?.touched">
+      <p *ngIf="Mail?.hasError('required')" class="error">
+        El email es requerido.
+      </p>
+      <p *ngIf="Mail?.hasError('email')" class="error">
+        El formato del email debe ser válido.
+      </p>
+    </div>
+    <div>
+    <label for="">contraseña</label>
+    <input type="password" formControlName="Escribe aquí tu contraseña"[class.border-danger]="PasswordValid">
+  </div>
+  <div *ngIf="Password?.errors && Password?.touched">
+    <p *ngIf="Password?.hasError('required')" class="error">
+      El password es requerido.
+    </p>
+    <p *ngIf="Password?.errors?.['minlength']" class="error">
+      El password debe ser de 8 o más caracteres.
+    </p>
+  
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputFecha" class="form-label">Fecha</label>
+    <input type="date" class="form-control" id="exampleInputFecha">
+</div>
+
+<div class="mb-3">
+    <label for="exampleEjemploSobreMi" class="form-label">Texto largo</label>
+    <textarea class="form-control" id="exampleEjemploSobreMi"></textarea>
+</div>
+
+  
+
+<button type="button" class="btn btn-light"data-bs-toggle="modal" data-bs-target="#loginModal">
+    <i class="fa-solid fa-lock-open"></i>
+    </button>
+    <div class="modal-footer">
+        
+        <button type="submit" class="btn btn-primary"(click)="back()">Login</button>
+         </div>
+      
+      </div>
+    </form>
+    </div>
+  </div>
+

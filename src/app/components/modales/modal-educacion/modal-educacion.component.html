@@ -1,0 +1,82 @@
+<!-- Modal Editar Educación-->
+<form [formGroup]="educacion" (ngSubmit)="onEnviar($event)"name="educacionForm" class="bg-white rounded p-5 seccion">
+  <div class="modal fade" id="editarEducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Educacion</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+          </div>
+          
+          
+            
+              
+                
+                <form name="educacionForm">
+                  <div class="modal-body">
+                  
+                    <!--formulario de experiencia-->
+                 
+                    <div class="mb-3">
+                    <label for="lugar"class="form-label">Editar Lugar</label>
+                    <textarea class="form-control"  formControlName="lugar" [ngModel]="educacion.lugar" rows="3" [ngClass]="{'is-invalid': Lugar.errors && Lugar.touched, 'is-valid': !Lugar.errors && Lugar.touched}"></textarea>
+                    <div *ngIf="Lugar.errors && Lugar.touched">    
+                      <p *ngIf="Lugar.hasError('required')" class="text-danger">
+                        El lugar es requerido.
+                      </p>></textarea>
+                    
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="inicio"class="form-label">Editar Inicio</label>
+                      <textarea class="form-control"  formControlName="inicio" [(ngModel)]="inicio"></textarea> 
+                      
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="fin"class="form-label">Editar Fin</label>
+                        <textarea class="form-control"  formControlName="fin"[(ngModel)]="fin" ></textarea>
+                        
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="descripcion"class="form-label">Editar Descripcion</label>
+                          <textarea class="form-control"  formControlName="descripcion" [ngModel]="educacion.descripcion" rows="3" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
+                          <div *ngIf="Descripcion.errors && Descripcion.touched">    
+                            <p *ngIf="Descripcion.hasError('required')" class="text-danger">
+                              La descripcion es requerida.
+                            </p>></textarea>
+                    
+                          </div>
+        
+                          <div>
+                          </div> 
+
+  <!-- Button trigger modal -->
+   <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#educacionModal">
+  <i class="fa fa-pen"></i>
+  </button>
+  
+   <!-- Button trigger modal cerrar-->
+   <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminarEducacion"><i class="fa-solid 
+    fa-trash-can"></i></button>
+
+
+    <button type="button" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#crearEducacion"><i class="fa-solid fa-plus"></i></button>
+                 
+                
+                
+  <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"(click)="limpiar()">Limpiar</button>
+            <button type="button" class="btn btn-Login"data-bs-dismiss="modal">Guardar</button>
+            <button type="button" class="btn btn-Delete"data-bs-dismiss="modal">Borrar</button>
+             </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--ventanas modales-->
+
+      <app-crear-educacion></app-crear-educacion>
+      <app-eliminar-educacion></app-eliminar-educacion>

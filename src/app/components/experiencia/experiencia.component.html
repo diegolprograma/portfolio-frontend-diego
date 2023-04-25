@@ -1,0 +1,26 @@
+<section class="experiencia">
+  <div class="row" *ngFor="let experiencia of experiencias">
+  <h2>Experiencia </h2>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+       <ul>
+          <li><h4>{{experiencia.lugar}}</h4>
+            <h5>{{experiencia.inicio}} / {{experiencia.fin}}</h5></li>
+          <p>{{experiencia.puesto}}</p>
+       </ul>
+     
+  </div>
+</div>
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#experienciaModal"routerLink="editarExperiencia/{{experiencia.id}}">
+  <i class="fa fa-pen"></i>
+  </button>
+  <!-- Button trigger modal cerrar-->
+  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#experienciaModal"(click)="borrarExperiencia(experiencia.id)"><i class="fa-solid 
+    fa-trash-can"></i></button>
+
+</section>
+
+  
+  
+  <app-modal-experiencia></app-modal-experiencia>

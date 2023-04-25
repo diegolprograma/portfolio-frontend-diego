@@ -1,0 +1,14 @@
+<section class="proyectos" *ngFor="let proyecto of proyectos">
+
+    <h5>Proyectos</h5>
+    <P>{{proyecto.descripcion}}</P>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#proyectosModal"(click)="editar()">
+      <i class="fa fa-pen"></i>
+      </button>
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#proyectosModal"(click)="cerrar()"><i class="fa-solid 
+        fa-trash-can"></i></button>
+
+ </section>
+
+ <app-modal-proyectos></app-modal-proyectos>

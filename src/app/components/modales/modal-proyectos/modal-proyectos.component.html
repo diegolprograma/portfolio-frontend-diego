@@ -1,0 +1,59 @@
+<!-- Modal Editar Proyectos-->
+<form [formGroup]="proyectos" (ngSubmit)="onEnviar($event)"name="proyectosForm" class="bg-white rounded p-5 seccion">
+  <div class="modal fade" id="editarEducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Proyectos</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"(click)="limpiar()" ></button>
+          </div>
+          
+          
+            
+              
+                
+                <form name="proyectosForm">
+                  <div class="modal-body">
+                  
+                    <!--formulario de proyectos-->
+                 
+                    <div class="mb-3">
+                    <label for="proyectos"class="form-label">Editar Descripcion</label>
+                    <textarea class="form-control"  formControlName="proyectos" [ngModel]="proyecto.descripcion" rows="3" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
+                    <div *ngIf="Descripcion.errors && Descripcion.touched">    
+                      <p *ngIf="Descripcion.hasError('required')" class="text-danger">
+                        La descripcion es requerida.
+                      </p>></textarea>
+                    
+                    </div>
+
+                   
+
+  <!-- Button trigger modal -->
+   <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#proyectosModal">
+  <i class="fa fa-pen"></i>
+  </button>
+  
+   <!-- Button trigger modal cerrar-->
+   <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#eliminarProyectos"><i class="fa-solid 
+    fa-trash-can"></i></button>
+
+
+    <button type="button" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#crearProyectos"><i class="fa-solid fa-plus"></i></button>
+                 
+                
+                
+  <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"(click)="limpiar()" >Limpiar</button>
+            <button type="button" class="btn btn-Login">Guardar</button>
+            <button type="button" class="btn btn-Delete">Borrar</button>
+             </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--ventanas modales-->
+
+      <app-crear-proyectos></app-crear-proyectos>
+      <app-eliminar-proyectos></app-eliminar-proyectos>

@@ -1,0 +1,149 @@
+{   
+   "personas": [
+        {
+              "id":1,
+              "nombre": "Diego",
+              "apellido": "Lozano",
+              "edad": 47,
+              "email": "ejemplo@mail.com"
+
+
+        }
+   ],
+
+
+
+
+    "redes": [
+        {
+            "id":1,
+            "nombre": "Github",
+            "url": "https://github.com/diegolprograma",
+            "icoFont": "fa-brands fa-square-github"
+            
+        },
+        {
+            "id":2,
+            "nombre": "LinkedIn",
+            "url": "https://linkedin.com/in/diegolozanoprogramador/",
+            "icoFont": "fa-brands fa-linkedin"
+        }
+        
+        
+      
+    ],
+
+      "banners": [{
+            "id":1,
+            "imagen": "./../../../assets/img/diego.jpg",
+            "imagenfondo": "./../../assets/img/atardecer.jpg",
+            "presentacion": "Hola soy Diego Lozano Desarrollador Full Stack Junior",
+            "descripcion": "Estudiante de Argentina Programa, emprendedor y futuro programador FullStack"
+      }
+
+      ],
+    
+    
+    "experiencias":[
+        {
+            "id":1,
+            "lugar": "Osuthgra",
+            "inicio": 2000,
+            "fin": 2008,
+            "puesto": "Actividad administrativa en area medica. Coordinacion logistica en area de alta complejidad. Armado de expedientes y presentacion en Servicios de salud. Tramites."
+
+
+    },
+    {
+            "id":2,
+            "lugar": "El Ojo de Horus Estudio",
+            "inicio": 2010,
+            "fin": 2012,
+            "puesto": "Trabajos de grabacion y mezcla, edicion y produccion de material de audio."
+
+
+},
+{
+            "id":3,
+            "lugar": "Encuadernacion Latinoamerica S.R.L.",
+            "inicio": 2013,
+            "fin": 2020,
+            "puesto": "Labor administrativa, manejo de expedientes y personal."
+
+
+}
+
+],
+
+"educaciones":[
+    {
+        "id":1,
+        "lugar": "Instituto N 1 Manuel Belgrano",
+        "inicio": 1989,
+        "fin": 1994,
+        "descripcion": "Titulo secundario Bachiller."
+
+
+},
+{
+        "id":2,
+        "lugar": "Tecson",
+        "inicio": 2010,
+        "fin": 2012,
+        "descripcion": "Tecnico en grabacion y mezcla. Editor de material de audio."
+
+
+},
+{
+        "id":3,
+        "lugar": "Fundacion Energizar",
+        "inicio": 2018,
+        "fin": 2018,
+        "descripcion": "Tecnico en instalacion de paneles solares y energias renovables."
+
+
+}
+
+],
+
+"habilidades": [{
+    "id":1,
+    "especialidad":"html",
+    "porcentaje":"90",
+    "color":"bg-danger"
+},
+{
+    "id":2,
+    "especialidad":"css",
+    "porcentaje":"75",
+    "color":"bg-info"
+},
+{
+    "id":3,
+    "especialidad":"typescript",
+    "porcentaje":"80",
+    "color":"bg-success"
+},
+{
+    "id":4,
+    "especialidad":"angular",
+    "porcentaje":"40",
+    "color":"bg-warning"
+}
+],
+ 
+"proyectos": [{
+         "id":1,
+         "descripcion":"Portfolio Web Argentina Programa"
+
+}
+],
+
+"hobbies": [{
+    "id":1,
+    "url":"https://www.youtube.com/watch?v=etc9lxmCW5k"
+
+}
+]
+
+}

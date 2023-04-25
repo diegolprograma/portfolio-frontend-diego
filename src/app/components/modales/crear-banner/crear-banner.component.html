@@ -1,0 +1,79 @@
+<!-- Modal Crear Banner-->
+<form [formGroup]="crearBanner" (ngSubmit)="onEnviar($event)"name="bannerForm" class="bg-white rounded p-5 seccion">
+    <div class="modal fade" id="crearBanner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Banner</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+              
+                
+                  
+                  <form name="bannerForm">
+                    <div class="modal-body">
+                    
+                      <!--formulario de banner-->
+                   
+                      <div class="mb-3">
+                      <label for="imagen"class="form-label">Crear Imagen</label>
+                      <textarea class="form-control"  formControlName="imagen" [ngModel]="banner.imagen" rows="3" [ngClass]="{'is-invalid': Imagen.errors && Imagen.touched, 'is-valid': !Imagen.errors && Imagen.touched}"></textarea>
+                      <div *ngIf="Imagen.errors && Imagen.touched">    
+                        <p *ngIf="Imagen.hasError('required')" class="text-danger">
+                          La imagen es requerida.
+                        </p>></textarea>
+                      
+                      </div>
+  
+                      <div class="mb-3">
+                        <label for="imagenfondo"class="form-label">Crear Imagen de fondo</label>
+                        <textarea class="form-control"  formControlName="imagenfondo"></textarea> 
+                        
+                        </div>
+  
+                        <div class="mb-3">
+                          <label for="presentacion"class="form-label">Crear Presentacion</label>
+                          <textarea class="form-control"  formControlName="presentacion"></textarea>
+                          
+                          </div>
+  
+                          <div class="mb-3">
+                            <label for="descripcion"class="form-label">Crear Descripcion</label>
+                            <textarea class="form-control"  formControlName="descripcion" [ngModel]="banner.descripcion" rows="3" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
+                            <div *ngIf="Descripcion.errors && Descripcion.touched">    
+                              <p *ngIf="Descripcion.hasError('required')" class="text-danger">
+                                La descripcion es requerida.
+                              </p>></textarea>
+                      
+                            </div>
+          
+                            <div>
+                            </div> 
+  
+    <!-- Button trigger modal -->
+     <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#crearBanner">
+    <i class="fa fa-pen"></i>
+    </button>
+    
+     <!-- Button trigger modal cerrar-->
+     <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#bannerModal"><i class="fa-solid 
+      fa-trash-can"></i></button>
+  
+  
+  
+                   
+                  
+                  
+    <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-Login">Guardar</button>
+              
+               </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        

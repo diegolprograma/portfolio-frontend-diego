@@ -1,0 +1,55 @@
+<!-- Modal Crear Proyectos-->
+<form [formGroup]="crearProyectos" (ngSubmit)="onEnviar($event)"name="proyectosForm" class="bg-white rounded p-5 seccion">
+    <div class="modal fade" id="crearProyectos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Proyectos</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+              
+                
+                  
+                  <form name="proyectosForm">
+                    <div class="modal-body">
+                    
+                      <!--formulario de proyectos-->
+                   
+                      <div class="mb-3">
+                      <label for="proyectos"class="form-label">Crear Proyecto</label>
+                      <textarea class="form-control"  formControlName="proyectos" [ngModel]="proyecto.proyectos" rows="3" [ngClass]="{'is-invalid': Proyectos.errors && Proyectos.touched, 'is-valid': !Proyectos.errors && Proyectos.touched}"></textarea>
+                      <div *ngIf="Proyectos.errors && Proyectos.touched">    
+                        <p *ngIf="Proyectos.hasError('required')" class="text-danger">
+                          El proyecto es requerido.
+                        </p>></textarea>
+                      
+                      </div>
+  
+                            <div>
+                            </div> 
+  
+    <!-- Button trigger modal -->
+     <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#crearProyectos">
+    <i class="fa fa-pen"></i>
+    </button>
+    
+     <!-- Button trigger modal cerrar-->
+     <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid 
+      fa-trash-can"></i></button>
+  
+  
+  
+                   
+                  
+                  
+    <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-Login">Guardar</button>
+              
+               </div>
+              </form>
+            </div>
+          </div>
+        </div>

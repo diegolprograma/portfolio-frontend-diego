@@ -1,0 +1,27 @@
+<!--Seccion Habilidades tecnicas-->
+
+<section class="habilidades">
+   
+  <h3>Habilidades tecnicas</h3>
+  
+  <div class="progress" *ngFor="let habilidad of habilidades"> 
+    
+    <div class="progress-bar progress-bar-striped  progress-bar-animated" [ngClass]="habilidad.color"role="progressbar"aria-label="Animated striped example" aira-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width.%]="habilidad.porcentaje">{{habilidad.porcentaje}}% {{habilidad.especialidad}} COMPLETADO
+  </div>
+  </div>
+<br>
+
+ 
+  
+<!-- Button trigger modal -->
+ <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#habilidadesModal"routerLink="editarHabilidades/{{habilidades.id}}">
+  <i class="fa fa-pen"></i>
+  </button>
+   <!-- Button trigger modal cerrar-->
+  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#habilidadesModal"(click)="borrarHabilidades(habilidades.id)"><i class="fa-solid 
+    fa-trash-can"></i></button>
+
+</section>
+
+
+<app-modal-habilidades></app-modal-habilidades>

@@ -1,0 +1,30 @@
+<section id="navbar">
+  <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar" target="_blank"><img class="logoAp" src="assets/img/logo.png" alt="logo-argentina-programa"></a>
+        
+          <ul class="list-group list-group-horizontal" *ngFor="let red of redes">
+              <li class="list-group-item"><a [href]="red.url" target="_blank"><i [ngClass]="red.icoFont"></i></a></li>
+              
+          </ul>
+              <!-- Button trigger modal -->
+<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#logoutModal">
+<i class="fa-solid fa-lock"></i>
+</button>
+<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+  <i class="fa-solid fa-lock-open"></i>
+  </button>
+
+  <li>          
+    <button type="submit" *ngIf="isLogged" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#agregarRed"><i class="fa-solid fa-plus"></i></button>
+  </li>
+
+      </div>
+      
+    </nav>
+</section>
+
+
+<app-modal-login></app-modal-login>
+<app-modal-logout></app-modal-logout>
+<app-crear-red></app-crear-red>
