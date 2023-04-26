@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class BannerService {
 
-  url= 'http://localhost:8080/banner/'
+  url= 'https://portfolio-backend-diego.onrender/banner/'
 
   constructor(private httpClient:HttpClient) { }
 

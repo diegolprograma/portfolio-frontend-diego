@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class HabilidadService {
 
-  url= 'http://localhost:8080/habilidad/'
+  url= 'https://portfolio-backend-diego.onrender/habilidad/'
 
   constructor(private httpClient:HttpClient) { }
 

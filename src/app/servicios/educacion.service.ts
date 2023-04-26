@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EducacionService {
 
-  url= 'http://localhost:8080/educacion/'
+  url= 'https://portfolio-backend-diego.onrender/educacion/'
 
   constructor(private httpClient:HttpClient) { }
 

@@ -9,8 +9,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AuthService {
 
-  url = 'http://localhost:8080/persona/auth/login'  
- // url = 'https://portfolio-backend2-ntgp.onrender.com/persona/auth/login'
+  url = 'https://portfolio-backend-diego.onrender.com/auth/login'  
+ // url = 'https://portfolio-backend-diego.onrender.com/persona/auth/login'
   
   currentUserSubject: BehaviorSubject<any>; 
 
