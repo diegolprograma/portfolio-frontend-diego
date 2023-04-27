@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PersonaService {
   
-  url= 'https://portfolio-backend-diego.onrender/persona/'
+  url= 'https://portfolio-backend-diego.onrender.com/persona/'
 
   constructor(private httpClient:HttpClient) { }
 

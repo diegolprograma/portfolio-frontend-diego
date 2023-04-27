@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProyectoService {
 
-  url= 'https://portfolio-backend-diego.onrender/proyecto/'
+  url= 'https://portfolio-backend-diego.onrender.com/proyecto/'
 
   constructor(private httpClient:HttpClient) { }
 

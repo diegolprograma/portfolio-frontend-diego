@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Red } from 'src/app/modelos/red';
-import { DatosService } from 'src/app/servicios/datos.service';
 import { RedService } from 'src/app/servicios/red.service';
 
 @Component({

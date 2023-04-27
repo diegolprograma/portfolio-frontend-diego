@@ -8,7 +8,7 @@ import { Red } from '../modelos/red';
 })
 export class RedService {
   
-  url= 'https://portfolio-backend-diego.onrender/red/'
+  url= 'https://portfolio-backend-diego.onrender.com/red/'
 
   constructor(private httpClient: HttpClient ) { }
 

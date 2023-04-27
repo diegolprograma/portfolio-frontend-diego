@@ -15,10 +15,25 @@ import { HobbiesComponent } from './components/hobbies/hobbies.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { IndexComponent } from './components/index/index.component';
 
-import { LoginComponent } from './components/login/login.component';
+
 
 import { PersonaService } from './servicios/persona.service';
 import { InterceptorService } from './servicios/interceptor.service';
+import { ModalBannerComponent } from './components/modales/modal-banner/modal-banner.component';
+
+import { ModalExoerienciaComponent } from './components/modales/modal-exoeriencia/modal-exoeriencia.component';
+import { ModalHabilidadesComponent } from './components/modales/modal-habilidades/modal-habilidades.component';
+import { ModalProyectosComponent } from './components/modales/modal-proyectos/modal-proyectos.component';
+import { ModalHobbiesComponent } from './components/modales/modal-hobbies/modal-hobbies.component';
+import { ModalRedComponent } from './components/modales/modal-red/modal-red.component';
+import { AddBannerComponent } from './components/modales/add-banner/add-banner.component';
+import { AddEexperienciaComponent } from './components/modales/add-experiencia/add-eexperiencia.component';
+ 
+import { AddHobbiesComponent } from './components/modales/add-hobbies/add-hobbies.component';
+import { AddRedComponent } from './components/modales/add-red/add-red.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { AddHabilidadComponent } from './components/modales/add-habilidad/add-habilidad.component';
+import { AddProyectoComponent } from './components/modales/add-proyecto/add-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +48,20 @@ import { InterceptorService } from './servicios/interceptor.service';
     ContactoComponent,
     IndexComponent,
  
-    LoginComponent,
+    
+      ModalBannerComponent,
+      ModalExoerienciaComponent,
+      ModalHabilidadesComponent,
+      ModalProyectosComponent,
+      ModalHobbiesComponent,
+      ModalRedComponent,
+      AddBannerComponent,
+      AddEexperienciaComponent,
+      AddHabilidadComponent,
+      AddProyectoComponent,
+      AddHobbiesComponent,
+      AddRedComponent,
+      LogoutComponent,
 
   ],
   imports: [

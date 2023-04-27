@@ -1,4 +1,10 @@
 export class Educacion {
+edit(value: any) {
+  throw new Error('Method not implemented.');
+}
+detail(id: any) {
+  throw new Error('Method not implemented.');
+}
 
 id?: number;
 lugar: string;

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class HobbieService {
 
-  url= 'https://portfolio-backend-diego.onrender/hobbie/'
+  url= 'https://portfolio-backend-diego.onrender.com/hobbie/'
 
   constructor(private httpClient:HttpClient) { }
 
