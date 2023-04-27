@@ -1,12 +1,18 @@
-<section class="proyectos" *ngFor="let proyecto of proyectos">
 
-    <h5>Proyectos</h5>
-    <P>{{proyecto.descripcion}}</P>
+<section class="proyectos">
+<h4>Proyectos</h4><br>
+<div class="row" *ngFor="let proyecto of proyectos">
+<div class="col-lg-1"></div>
+<div class="col-lg-11">
+
+<P>{{proyecto.descripcion}}</P>
+</div>
+</div>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#proyectosModal">
       <i class="fa fa-pen"></i>
       </button>
       <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid 
         fa-trash-can"></i></button>
-
+      
  </section>
