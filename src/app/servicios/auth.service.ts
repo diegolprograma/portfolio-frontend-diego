@@ -1,42 +1,26 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
+import { JwtDto } from '../modelos/jwto-dto';
+import { HttpClient } from '@angular/common/http';
+import { LoginUsuario } from '../modelos/login-usuario';
+import { NuevoUsuario } from '../modelos/nuevo-usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  url = 'https://portfolio-backend-diego.onrender.com/auth/login'  
+  authUrl:String= 'https://portfolio-backend-diego.onrender.com/auth/login'  
  // url = 'https://portfolio-backend-diego.onrender.com/persona/auth/login'
   
-  currentUserSubject: BehaviorSubject<any>; 
+ constructor(private httpClient: HttpClient) { }
 
-  
-  constructor(private http: HttpClient) { 
-   console.log('Auth está corriendo');
-   this.currentUserSubject=new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
-  }
-  
-  login(credenciales: any): Observable<any>{
-    //console.log(credenciales);
-    var httpOptions={
-      headers:new HttpHeaders({
-        'ContentType':'application/json'
-      })
-    }
-    return this.http.post<any>(this.url, credenciales, httpOptions).pipe(map(data=> {
-        sessionStorage.setItem('currentUser',JSON.stringify(data));
-        this.currentUserSubject.next(data);
-        console.log("authService está corriendo " + JSON.stringify(data));
-        return data;
-      }));
-   }
+ public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
+   return this.httpClient.post<any>(this.authUrl + 'nuevo', nuevoUsuario);
+ }
 
+ public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
+   return this.httpClient.post<JwtDto>(this.authUrl + 'login', loginUsuario);
+ }
   
-  get usuarioAutenticado() {
-    return this.currentUserSubject.value;
-  }
 }

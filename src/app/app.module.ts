@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { LoginComponent } from './components/login/login.component';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -35,6 +35,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { AddHabilidadComponent } from './components/modales/add-habilidad/add-habilidad.component';
 import { AddProyectoComponent } from './components/modales/add-proyecto/add-proyecto.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { AddProyectoComponent } from './components/modales/add-proyecto/add-proy
     ProyectosComponent,
     HobbiesComponent,
     ContactoComponent,
+    LoginComponent,
     IndexComponent,
  
     
@@ -62,6 +64,7 @@ import { AddProyectoComponent } from './components/modales/add-proyecto/add-proy
       AddHobbiesComponent,
       AddRedComponent,
       LogoutComponent,
+      
 
   ],
   imports: [

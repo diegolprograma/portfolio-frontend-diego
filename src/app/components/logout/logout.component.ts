@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/servicios/token-service.service'; 
 
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
   styleUrls: ['./logout.component.css']
 })
-export class LogoutComponent {
+export class LogoutComponent implements OnInit {
 
+  constructor(private tokenService: TokenService) { }
+
+  ngOnInit(): void {
+  }
+
+  onLogOut(): void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+ 
+  
 }
+

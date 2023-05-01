@@ -3,21 +3,22 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar" target="_blank"><img class="logoAp" src="assets/img/logo.png" alt="logo-argentina-programa"></a>
         
-          <ul class="navbar-nav">
-
+          
+        <ul class="navbar-nav"> 
           <div *ngFor="let red of redes">
-              
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item"><a [href]="red.url" target="_blank"><i [ngClass]="red.icofont"></i></a></li>
+            
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item"><a href="https://github.com/diegolprograma" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
+              <li class="list-group-item"><a href="https://linkedin.com/in/diegolozanoprogramador/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
           </ul>
         
         </div>
       </ul>
               <!-- Button trigger modal -->
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#logoutModal">
+<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#logout">
 <i class="fa-solid fa-lock"></i>
 </button>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#login">
   <i class="fa-solid fa-lock-open"></i>
   </button>
 
@@ -26,8 +27,8 @@
     </button>
   </li>
 
-
-
+  <app-login></app-login>
+  <app-logout></app-logout>
 
 
 

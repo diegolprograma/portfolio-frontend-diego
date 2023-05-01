@@ -3,17 +3,21 @@
     <div class="container text-center">
       <div class="row" *ngFor="let banner of banners"> 
         <div class="col mt-5">
-          <img [src]="banner.imagenfondo" class="rounded-circle w-75" [alt]="banner.imagen">
+          <img [src]="banner.imagen" class="rounded-circle w-75">
         </div>
-        <div class="col">
+        
+         <div class="col">
           <h2 class="text-white text-center mt-5 pt-5"> 
             {{banner.presentacion}}</h2> 
+          </div>
             <h5 class="text-white text-center mt-5 pt-5"> 
               <p>{{banner.descripcion}}</p></h5> 
 
-             </div>
-      </div>
+             
+             
+          
     </div>
+  </div>
     <!-- Button trigger modal -->
   <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#bannerModal">
     <i class="fa fa-pen"></i>
