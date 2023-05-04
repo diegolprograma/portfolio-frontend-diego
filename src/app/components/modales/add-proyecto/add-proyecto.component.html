@@ -1,1 +1,34 @@
-<p>add-proyecto works!</p>
+<!-- Modal Proyectos -->
+<div class="modal fade" id="proyectosModalAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Proyecto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+        </div>
+          <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="proyectosForm"> 
+            <div class="modal-body">
+                    <!-- formulario de Proyectos-->
+                
+
+                       <label for="proyectoInfo" class="form-label">Agregar Información de Proyecto Realizado <span class="text-danger">*</span></label>
+                        <textarea class="form-control"  rows="3" formControlName="descripcion" [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.touched, 'is-valid': !Descripcion?.errors && Descripcion?.touched}"></textarea >
+                        <div *ngIf="Descripcion?.errors && Descripcion?.touched">    
+                          <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
+                            La descripcion es requerida.
+                          </p>
+                        </div>
+                    </div>
+                    <div >
+                      <input type="hidden" formControlName="personaid" >
+                    </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+                    <button type="submit" class="btn btnLogin" >Agregar</button>
+                  </div>                
+              </form>
+              </div>
+    </div>
+  </div>
+

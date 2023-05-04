@@ -1,1 +1,31 @@
-<p>modal-proyectos works!</p>
+
+<!-- Formulario Edit Proyectos -->
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="proyectosFormEdit" class="bg-white rounded p-5 seccion"> 
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Editar Proyecto</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+             <div class="modal-body">
+               <div >
+                 <input type="hidden" formControlName="persona" [ngModel]="proye!.persona" >
+               </div>
+            
+               <div class="mb-3">
+                   <label for="proyectoInfo" class="form-label">Modificar Información de Proyecto Realizado</label>
+                   <textarea class="form-control"  rows="3" formControlName="descripcion" [ngModel]="proye.descripcion" [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.touched, 'is-valid': !Descripcion?.errors && Descripcion?.touched}"></textarea >
+                     <div *ngIf="Descripcion?.errors && Descripcion?.touched">    
+                       <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
+                         La descripcion es requerida.
+                       </p>
+                     </div>
+               </div>
+               <div >
+                 <input type="hidden" formControlName="proyecto.persona" [ngModel]="proye!.persona" >
+               </div>
+             </div>
+             <div class="modal-footer">
+               <button type="submit" class="btn btnLogin">Guardar</button>
+             </div>
+           </div>
+         </form>

@@ -7,6 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProyectoService {
+  get() {
+    throw new Error('Method not implemented.');
+  }
 
   url= 'https://portfolio-backend-diego.onrender.com/proyecto/'
 

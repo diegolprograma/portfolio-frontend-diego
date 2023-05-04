@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class EducacionService {
 
   url= 'https://portfolio-backend-diego.onrender.com/educacion/'
+    getEducaciones: any;
 
   constructor(private httpClient:HttpClient) { }
 

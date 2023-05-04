@@ -1,0 +1,41 @@
+<!-- Formulario  Editar Experiencia -->
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="experienciaModalEd">Editar Experiencia</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" routerLink="/"></button>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experienciaForm" class="bg-white rounded p-5 seccion">
+    <div class="modal-body">
+      <input type="hidden" formControlName="id" [ngModel]="experiencia.id">
+
+      <div class="mb-3">
+        <label for="lugar" class="form-label">Editar Lugar</label>
+        <input type="text" class="form-control" formControlName="lugar" [ngModel]="experiencia.lugar">
+      </div>
+
+      <div class="mb-3">
+        <label for="inicio" class="form-label">Editar Periodo Inicio</label>
+        <input type="date" class="form-control" formControlName="inicio" [ngModel]="experiencia.inicio">
+      </div>
+      <div class="mb-3">
+        <label for="fin" class="form-label">Editar Periodo Fin</label>
+        <input type="date" class="form-control" formControlName="fin" [ngModel]="experiencia.fin">
+      </div>
+
+      <div class="mb-3">
+        <label for="puesto" class="form-label">Editar Cargo</label>
+        <input type="text" class="form-control" formControlName="puesto" [ngModel]="experiencia.puesto" placeholder="Nombre nuevo" [ngClass]="{'is-invalid': Puesto?.errors && Puesto?.touched, 'is-valid': !Puesto?.errors && Puesto?.touched}">
+        <div *ngIf="Puesto?.errors && Puesto?.touched">
+          <p *ngIf="Puesto?.hasError('required')" class="text-danger">
+            El puesto es requerido.
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btnLogin">Guardar</button>
+      </div>
+    </div>
+  </form>
+</div>
+

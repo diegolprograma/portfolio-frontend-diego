@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
@@ -18,10 +18,10 @@ import { IndexComponent } from './components/index/index.component';
 
 
 import { PersonaService } from './servicios/persona.service';
-import { InterceptorService } from './servicios/interceptor.service';
+import { interceptorProvider } from './servicios/interceptor.service';
 import { ModalBannerComponent } from './components/modales/modal-banner/modal-banner.component';
 
-import { ModalExoerienciaComponent } from './components/modales/modal-exoeriencia/modal-exoeriencia.component';
+
 import { ModalHabilidadesComponent } from './components/modales/modal-habilidades/modal-habilidades.component';
 import { ModalProyectosComponent } from './components/modales/modal-proyectos/modal-proyectos.component';
 import { ModalHobbiesComponent } from './components/modales/modal-hobbies/modal-hobbies.component';
@@ -34,6 +34,13 @@ import { AddRedComponent } from './components/modales/add-red/add-red.component'
 import { LogoutComponent } from './components/logout/logout.component';
 import { AddHabilidadComponent } from './components/modales/add-habilidad/add-habilidad.component';
 import { AddProyectoComponent } from './components/modales/add-proyecto/add-proyecto.component';
+import { ModalExperienciaComponent } from './components/modales/modal-experiencia/modal-experiencia.component';
+import { ModalEducacionComponent } from './components/modales/modal-educacion/modal-educacion.component';
+
+
+
+
+
 
 
 @NgModule({
@@ -52,7 +59,8 @@ import { AddProyectoComponent } from './components/modales/add-proyecto/add-proy
  
     
       ModalBannerComponent,
-      ModalExoerienciaComponent,
+      ModalEducacionComponent,
+      ModalExperienciaComponent,
       ModalHabilidadesComponent,
       ModalProyectosComponent,
       ModalHobbiesComponent,
@@ -75,7 +83,7 @@ import { AddProyectoComponent } from './components/modales/add-proyecto/add-proy
     ReactiveFormsModule
   ],
   providers: [PersonaService,
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
+    interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

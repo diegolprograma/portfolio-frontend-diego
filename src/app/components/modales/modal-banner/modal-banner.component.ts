@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-banner',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./modal-banner.component.css']
 })
 export class ModalBannerComponent {
+  
+
 
 }
